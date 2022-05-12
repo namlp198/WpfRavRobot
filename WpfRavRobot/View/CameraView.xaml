@@ -9,6 +9,7 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="12*"/>
+            <RowDefinition Height="3"/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <Grid>
@@ -19,12 +20,21 @@
                        Stretch="Fill"/>
             </ScrollViewer>
         </Grid>
-        <Grid Grid.Row="1">
-            <StatusBar>
-                <StatusBarItem Content="Camera View"
-                               Background="LightGray"
-                               Foreground="DarkSlateBlue"/>
-            </StatusBar>
+        <Grid Grid.Row="2" Background="CornflowerBlue">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Camera Basler USB3.0"
+                       VerticalContentAlignment="Center"
+                       x:Name="lbCameraInfo"
+                       Foreground="Black"/>
+                <Separator />
+                <Label Content="Width x Height"
+                       Foreground="Black"/>
+            </StackPanel>
         </Grid>
     </Grid>
 </UserControl>
