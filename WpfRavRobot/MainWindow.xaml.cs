@@ -26,7 +26,9 @@ namespace WpfRavRobot
 
             BitmapImage bitmap = new BitmapImage();
             bitmap.BeginInit();
-            bitmap.UriSource = new Uri(@"D:\ENTRY\Company\RAV\WpfRavRobot\WpfRavRobot\assets\img\Factory.jpg");
+
+            string uriString = System.IO.Path.GetFullPath(@".\assets\img\Factory.jpg");
+            bitmap.UriSource = new Uri(uriString);
             bitmap.EndInit();
             ucView.imgView.Source = bitmap;
         }
